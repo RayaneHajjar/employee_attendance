@@ -14,7 +14,8 @@ You need first to create your database, then to add the following tables:
 **'employee' Table**  
 ![employee](https://user-images.githubusercontent.com/75786591/171226653-271f1e4d-119f-49ee-af5f-685ae9b46666.png)  
 **'attendance' Table**  
-![attendance](https://user-images.githubusercontent.com/75786591/171226698-1c8d2dc1-d767-4d0b-b035-71ab0cfd6980.png)  
+![attendance](https://user-images.githubusercontent.com/75786591/171226698-1c8d2dc1-d767-4d0b-b035-71ab0cfd6980.png) 
+Now you have to modify the value of all those variables whose values are specified in between `< >` in **connection.php** file inside the apis folder.
 ## Screenshots  
 ![Screenshot (39)](https://user-images.githubusercontent.com/75786591/171233773-88fd20a9-b215-4a59-a784-69a9f824fe9c.png)
 ![Screenshot (40)](https://user-images.githubusercontent.com/75786591/171233804-9fa5ef79-bd9a-4d78-8ab8-1c2de93e4638.png)
