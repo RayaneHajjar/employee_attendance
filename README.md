@@ -1,7 +1,11 @@
 # Employee Attendance Management System  
 This project let the registred user:  
 - modify her/his account
-- see the list of employees, modify their informations, add new ones, and delete old ones
-- see the list of branches, modify their informations, add new ones, and delete old ones
+- manage employees
+- manage branches
 - track employee's attendances
-- generate a report about the working hours and the total salary deserved.
+- generate reports.  
+## Running the App   
+You need first to create your database, then to add the following tables:
+## User Table  
+![user](https://user-images.githubusercontent.com/75786591/171226124-2fa90ccc-a204-4157-b1cc-13f9ef39379b.png)
