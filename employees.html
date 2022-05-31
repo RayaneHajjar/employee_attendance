@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Attendance</title>
+    <link rel="stylesheet" href="./assets/css/topnav.css">
+    <link rel="stylesheet" href="./assets/css/employees.css">
+    <script src="https://kit.fontawesome.com/e9aaebdd5c.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./assets/js/employees.js"></script>  
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="home.html"><span class="fa-solid fa-house"></span> Home</a>
+        <a href="account.html"><span class="fa-solid fa-user"></span> Account</a>
+        <a href="branches.html"><span class="fa-solid fa-list"></span> Branches</a>
+        <a href="employees.html" class="active"><span class="fa-solid fa-table-list"></span> Employees</a>
+        <a href="attendances.html"><span class="fa-solid fa-calendar-check"></span> Attendances</a>
+        <a href="reports.html"><span class="fa-solid fa-file"></span> Reports</a>
+        <a href="./assets/apis/logout.php" class="right"><span class="fa-solid fa-right-from-bracket"></span> Logout</a>
+        <a href="javascript:void(0);" class="menu" id="menuIcon"><span class="fa-solid fa-bars"></span></a>
+    </div>
+    <div class="area">
+        <div class="wrapper">
+            <form method="post">
+                <input type="submit" value="New" id="btnNew" class="btn">
+                <input type="submit" value="Manage" id="btnManage" class="btnactive">
+            </form>
+            <h2 class="title"></h2>
+            <div id="data"></div>
+        </div>
+    </div>
+</body>
+</html>

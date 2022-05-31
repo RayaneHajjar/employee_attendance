@@ -1,0 +1,38 @@
+.welcome {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+.name{
+    font-size:40px;
+    text-align: center;
+}
+.infos { 
+    text-align: center;
+    color:#212121;
+    padding-top:5%;
+    font-size:20px;
+}
+
+@media screen and (max-width: 780px) {
+    .header {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .welcome {
+        font-size: 50px;
+        font-weight: bolder;       
+        text-align: center;
+    }
+    .name{
+        font-size: 20px;
+        text-align: center;
+    }
+    .infos {
+        color:#212121;
+        padding-top:100px;
+        font-size:15px;
+        text-align: center;
+    }
+}
