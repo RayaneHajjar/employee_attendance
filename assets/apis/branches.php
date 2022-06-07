@@ -36,8 +36,8 @@
         $branch_name = $_POST['branch_name'];
 		$latitude = $_POST['latitude'];
 		$longitude = $_POST['longitude'];
-        $accurency = $_POST['accurency'];
-		$sql = "update branch set name='$branch_name', latitude=$latitude, longitude=$longitude, accurency=$accurency where branch_id=$branch_id";
+        $accuracy = $_POST['accuracy'];
+		$sql = "update branch set name='$branch_name', latitude='$latitude', longitude='$longitude', accuracy=$accuracy where branch_id=$branch_id";
 		$res = mysqli_query($link, $sql);
 		if(mysqli_affected_rows($link) > 0)
 			$msg = "done";
@@ -73,15 +73,15 @@
         $branch_name = $_POST['branch_name'];
         $latitude = $_POST['latitude'];
         $longitude = $_POST['longitude'];
-        $accurency = $_POST['accurency'];
+        $accuracy = $_POST['accuracy'];
         $sql = "select * from branch where name='$branch_name'";
 		$res = mysqli_query($link, $sql);
 		if(mysqli_num_rows($res) ==1)
 			$msg = "already exist";
 		else
 		{
-            $sql = "insert into branch(name, latitude, longitude, accurency)
-                values('$branch_name',$latitude,$longitude,$accurency)";
+            $sql = "insert into branch(name, latitude, longitude, accuracy)
+                values('$branch_name','$latitude','$longitude',$accuracy)";
             $res = mysqli_query($link, $sql);
             if(mysqli_affected_rows($link) > 0)
                 $msg = "done";

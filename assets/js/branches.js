@@ -39,7 +39,7 @@ $(document).ready(function () {
     function manageBranchesDashboard(){
         $(".title").text("Manage Branches");
         $("#data").removeClass("wrapper2");
-        html = `<table><tr><th>Name</th><th>Latitude</th><th>Longitude</th><th>Accurence</th><th colspan="2">Actions</th></tr>`;
+        html = `<table><tr><th>Name</th><th>Latitude</th><th>Longitude</th><th>Accuracy</th><th colspan="2">Actions</th></tr>`;
         mode = "load";
         $.ajax({
             type: "POST",
@@ -51,7 +51,7 @@ $(document).ready(function () {
                                 <td>${data[i]['name']}</td>
                                 <td>${data[i]['latitude']}</td>
                                 <td>${data[i]['longitude']}</td>
-                                <td>${data[i]['accurence']}</td>
+                                <td>${data[i]['accuracy']}</td>
                                 <td><span class="click" id="iconEdit" rel="${data[i]['branch_id']}"><i class='fa-solid fa-pen-to-square'></i></span> <span class="click" id="iconDelete" rel="${data[i]['branch_id']}"><i class='fa-solid fa-trash'></a></td>
                             </tr>`; 
                 }
@@ -62,7 +62,7 @@ $(document).ready(function () {
     } 
     
     //Form Function for Edit and Add
-    function form(branch_name, latitude, longitude, accurency){
+    function form(branch_name, latitude, longitude, accuracy){
         html = `<form class="form">
                     <div class="inputfield">
                         <label>Name</label>
@@ -77,8 +77,8 @@ $(document).ready(function () {
                         <input type="text" id="txtLongitude" class="input" value="${longitude}">
                     </div>
                     <div class="inputfield">
-                        <label>Accurency</label>
-                        <input type="text" id="txtAccurency" class="input" value="${accurency}">
+                        <label>Accuracy</label>
+                        <input type="text" id="txtAccuracy" class="input" value="${accuracy}">
                     </div>`;
         return html;        
     }
@@ -99,8 +99,8 @@ $(document).ready(function () {
                 branch_name = row[1];
                 latitude = row[2];
                 longitude = row[3];
-                accurency = row[4];
-                html = form(branch_name, latitude, longitude, accurency);
+                accuracy = row[4];
+                html = form(branch_name, latitude, longitude, accuracy);
                 html += `<div class="inputfield">
                             <input type="submit" value="Modify" id="btnModify" class="button" rel="${branch_id}">
                         </div>
@@ -118,11 +118,11 @@ $(document).ready(function () {
         branch_name = $("#txtName").val();
         latitude = $("#txtLatitude").val();
         longitude = $("#txtLongitude").val();
-        accurency = $("#txtAccurency").val();
+        accuracy = $("#txtAccuracy").val();
         $.ajax({
             type: "POST",
             url: "./assets/apis/branches.php",
-            data: {mode:mode, branch_id:branch_id, branch_name:branch_name, latitude:latitude, longitude:longitude, accurency:accurency},
+            data: {mode:mode, branch_id:branch_id, branch_name:branch_name, latitude:latitude, longitude:longitude, accuracy:accuracy},
             success: function (msg) {
                 if(msg == "done")
                     alert("The branch is edited successfully!");
@@ -173,14 +173,14 @@ $(document).ready(function () {
         branch_name = $("#txtName").val();
         latitude = $("#txtLatitude").val();
         longitude = $("#txtLongitude").val();
-        accurency = $("#txtAccurency").val();
-        if(branch_name=="" || latitude=="" || longitude=="" || accurency=="")
+        accuracy = $("#txtAccuracy").val();
+        if(branch_name=="" || latitude=="" || longitude=="" || accuracy=="")
             alert("You should fill in all the informations!");
         else{
             $.ajax({
                 type: "POST",
                 url: "./assets/apis/branches.php",
-                data: {mode:mode, branch_name:branch_name, latitude:latitude, longitude:longitude, accurency:accurency},
+                data: {mode:mode, branch_name:branch_name, latitude:latitude, longitude:longitude, accuracy:accuracy},
                 success: function (msg) {
                     if(msg == "done")
                         alert("The branch is added successfully!");
