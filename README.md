@@ -10,7 +10,7 @@ You need first to create your database, then to add the following tables:
 **'user' Table**  
 ![user](https://user-images.githubusercontent.com/75786591/171226124-2fa90ccc-a204-4157-b1cc-13f9ef39379b.png)  
 **'branch' Table**  
-![branch](https://user-images.githubusercontent.com/75786591/171226570-9b742a71-b7c2-49f0-8e82-398f8a781146.png)  
+![branch](https://user-images.githubusercontent.com/75786591/172442224-2833eaf4-b62e-416e-a4b6-3070f453c9a9.png)
 **'employee' Table**  
 ![employee](https://user-images.githubusercontent.com/75786591/171226653-271f1e4d-119f-49ee-af5f-685ae9b46666.png)  
 **'attendance' Table**  
